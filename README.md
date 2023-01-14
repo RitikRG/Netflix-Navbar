@@ -1,5 +1,5 @@
 # Netflix-Navbar
-
+An animated navbar
 
 <p align="left">
 <h2> Technologies used </h2>
@@ -16,7 +16,11 @@
 
 <img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/106656982/212484641-f2913ebf-c3d5-4b10-ab83-ab5cd4bed021.png">
 
+<hr>
 
-## Link
+## Try it out
 
 https://netflixnavbar.netlify.app/
+
+## Note
+It's for PC/Desktop, as of now it's not responsive 
