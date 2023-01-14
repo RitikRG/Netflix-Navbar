@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,600&display=swap');
+:root{
+    --nRed:#e80c14;
+    --nBlack:#171717;
+    --nWhite:#f1f5f9;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif
+}
+
+.container{
+    background-color: var(--nWhite);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#mainLogo{
+    top: 50%;
+    left: 50%;
+    background: url(/Assets/netflixLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    width: 300px;
+    height: 150px;
+}
+
+#hamMenu{
+    position: absolute;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.closedMenu{
+    transform: translateX(-100%);
+}
+.closingMenu{
+    animation: slideOut 1s;
+    transform: translateX(-100%);
+}
+.openMenu{
+    animation: slideIn 1s;
+    transform: translateX(0%);
+}
+@keyframes slideOut{
+    from{transform: translateX(0%); }
+    to{transform: translateX(-100%);}
+}
+@keyframes slideIn{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}
+}
+
+.mainLogoInit{
+    transform: translateX(-50%) translateY(-50%);
+}
+.slideLogo{
+    animation: slideRight 1s;
+    transform: translateX(0%) translateY(-50%);
+}
+@keyframes slideRight{
+    from{transform: translateX(-50%) translateY(-50%);}
+    to{transform: translateX(0%) translateY(-50%);}
+}
+
+
+.slideBackLogo{
+    animation: slideLeft 1s;
+    transform: translateX(-50%) translateY(-50%);
+}
+@keyframes slideLeft{
+    from{transform: translateX(0%) translateY(-50%);}
+    to{transform: translateX(-50%) translateY(-50%);}
+}
+
+#blackBg{
+    position: absolute;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 0, 71% 100%, 0% 100%);
+    width: 30vw;
+    height: 100vh;
+    background-color: var(--nBlack);
+}
+
+#redBg{
+    position: absolute;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 0, 71% 100%, 0% 100%);
+    width: 29vw;
+    height: 100vh;
+    background-color: var(--nRed);
+}
+
+#whiteBg{
+    position: absolute;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 0, 71% 100%, 0% 100%);
+    width: 28vw;
+    height: 100vh;
+    background-color: var(--nWhite);
+}
+
+#closeIc{
+    background: url(/Assets/closeIc.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: fixed;
+    left: 85%;
+    top: 2%;
+    cursor: pointer;
+}
+
+
+
+#menuHeader{
+    background: url(/Assets/netflixLogo.png);
+    width: 35%;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#menuContent{
+    margin-top: 115px;
+}
+.linksList{
+    list-style: none;
+}
+
+.linksList li{
+    margin-top: 10px;
+}
+
+.linksList li a{
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--nBlack);
+}
+.linksList li a:hover{
+    animation: hoverLink 300ms;
+}
+@keyframes hoverLink{
+    from{color: var(--nBlack);}
+    to{color: var(--nRed);}
+}
+
+#menuFooter{
+    position: fixed;
+    top: 90%;
+    left: 10%;
+    font-weight: 500;
+}
+#menuFooter p a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--nRed);
+}
